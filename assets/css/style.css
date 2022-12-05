@@ -22,6 +22,7 @@ body {
     font-family: var(--font);
     background: var(--blanco);
     color: var(--gris-oscuro);
+    font-weight: 400;
     min-width: 320px;
 }
 
@@ -138,7 +139,7 @@ body {
     color: var(--blanco);
     text-shadow: 2px 5px 10px rgb(0 0 0 / .5);
     letter-spacing: 1.5px;
-    font-weight: 400;
+    font-weight: inherit;
 }
 
 /* Span hero */
@@ -178,4 +179,84 @@ body {
 .nos-especializamos__p {
     line-height: 1.5;
     font-size: 1em;
+}
+
+.menu {
+    text-align: center;
+}
+
+/* Menu */
+.menu__title {
+    width: 100%;
+    padding: 1em;
+    background: var(--azul);
+    color: var(--blanco);
+    margin-bottom: 2.5em;
+}
+
+/* H2 */
+.menu__h2 {
+    font-weight: inherit;
+    letter-spacing: 1px;
+    text-decoration: underline;
+}
+
+/* Grid container */
+.menu__grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: max-content;
+    row-gap: 2em;
+}
+
+.menu__producto {
+    /* background: red; */
+}
+
+/* Imagen */
+.menu__img {
+    width: 80%;
+    max-height: 300px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* Contenedor textos */
+.menu__producto-texts {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* H2 del producto */
+.menu__h2--producto {
+    text-decoration: none;
+}
+
+/* Párrafo */
+.menu__p {
+    line-height: 1.2;
+}
+
+.menu__p--precio {
+    color: var(--rosa);
+    font-size: 1.2em;
+}
+
+/* Boton */
+.menu__boton {
+    display: inline-block;
+    margin: 3em 0;
+    padding: 1em 2.5em;
+    background: var(--azul);
+    color: var(--blanco);
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu__boton:active {
+    text-decoration: underline;
 }
