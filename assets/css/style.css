@@ -41,12 +41,13 @@ body {
     row-gap: .5em;
 }
 
-/* Logo */
+/* Contenedor Logo */
 .logo {
     display: inline-block;
     width: 50%;
 }
 
+/* logo */
 .logo__img {
     width: 100%;
 }
@@ -95,13 +96,19 @@ body {
     transform: translate(0, 0);
 }
 
+/* List item */
 .list__item {
     list-style: none;
 }
 
+/* List link */
 .list__link {
     text-decoration: none;
     cursor: pointer;
+}
+
+.list__link:active {
+    text-decoration: underline;
 }
 
 /* Links del menu */
@@ -116,15 +123,16 @@ body {
 }
 
 /* Hero */
-
 .hero {
     height: 100vh;
-    background: linear-gradient(to bottom, rgba(79 193 243 / .2), rgba(255 99 152 / 0.2)), url(/assets/image/hero-mobile.png) center center / cover no-repeat;
+    /* linear-gradient(to bottom, rgba(79 193 243 / .2), rgba(255 99 152 / 0.2)) */
+    background: linear-gradient(to bottom, rgba(50 50 50 / 0.2), rgba(100 100 100 / 0.2)), url(/assets/image/hero-mobile.png) center center / cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* H1 hero*/
 .hero__h1 {
     font-size: 1.9em;
     color: var(--blanco);
@@ -133,49 +141,9 @@ body {
     font-weight: 400;
 }
 
-.hero__h1::before {
-    content: "Reunimos";
-    animation: palabras 8s infinite ease-in;
-}
-
-/* Animaciones del h1 */
-@keyframes palabras{
-    0% {
-        content: "Reunimos";
-    }
-
-    75% {
-        content: "Delicia";
-    }
-
-    100% {
-        content: "Somos la";
-    }
-}
-
+/* Span hero */
 .span--hero {
     text-shadow: none;
-}
-
-.span--hero::before {
-    content: "sonrisas";
-    animation: palabras2 8s infinite ease-in;
-    padding-left: .5em
-}
-
-/* Animaciones del span del h1 */
-@keyframes palabras2{
-    0% {
-        content: "sonrisas";
-    }
-
-    75% {
-        content: "refrescante";
-    }
-
-    100% {
-        content: "felicidad";
-    }
 }
 
 /* Nos especializamos */
@@ -185,17 +153,20 @@ body {
     background: var(--rosa);
 }
 
+/* Imagen */
 .nos-especializamos__img {
     display: none;
     width: 100%;
     border-radius: 30px;
 }
 
+/* Contenedor textos */
 .nos-especializamos__texts {
     text-align: center;
     color: var(--blanco);
 }
 
+/* H2 */
 .nos-especializamos__h2 {
     font-size: 1.9em;
     font-weight: 400;
@@ -203,6 +174,7 @@ body {
     margin-bottom: .5em;
 }
 
+/* Párrafo */
 .nos-especializamos__p {
     line-height: 1.5;
     font-size: 1em;
