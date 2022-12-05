@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Font */
+    --font: 'Fredoka One', cursive;
+    
+    /* Colores */
+    --blanco: #FBFBFF;
+    --textos: #4F4F4F;
+    --azul: #4FC1F3;
+    --rosa: #FF6398;
+    --gris-claro: #717B84;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+}
