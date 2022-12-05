@@ -10,14 +10,103 @@
     
     /* Colores */
     --blanco: #FBFBFF;
-    --textos: #4F4F4F;
     --azul: #4FC1F3;
     --rosa: #FF6398;
     --gris-claro: #717B84;
+    --gris-oscuro: #2e2e2e;
 
     scroll-behavior: smooth;
 }
 
 body {
     font-family: var(--font);
+    background: var(--blanco);
+    color: var(--gris-oscuro);
+    min-width: 375px;
+}
+
+/* Container */
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    /* background: red; */
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr .1fr;
+    grid-auto-rows: max-content;
+    place-items: center;
+    row-gap: 1em;
+}
+
+/* Logo */
+.logo {
+    display: inline-block;
+    width: 60%;
+}
+
+.logo__img {
+    width: 100%;
+}
+
+/* Nav del menu mobile */
+.header__nav--menu {
+    align-self: start;
+}
+
+/* Icono menu mobile */
+.header__icon {
+    position: absolute;
+    z-index: 100;
+}
+
+/* Listas */
+.list {
+    display: none;
+}
+
+/* Lista de iconos de redes */
+.list--social {
+    display: flex;
+    gap: 1em;
+}
+
+/* Modificador para mostrar el menu */
+.list--menu {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5em;
+    background: var(--gris-oscuro);
+    transition: transform .3s ease;
+    transform: translate(0, -100%);
+}
+
+.list--menu-show {
+    transform: translate(0, 0);
+}
+
+.list__item {
+    list-style: none;
+}
+
+.list__link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Links del menu */
+.list__link--menu {
+    color: var(--blanco);
+    text-transform: uppercase;
 }
