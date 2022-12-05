@@ -38,14 +38,14 @@ body {
     display: grid;
     grid-template-columns: 1fr .1fr;
     grid-auto-rows: max-content;
-    place-items: center;
-    row-gap: 1em;
+    place-items: start center;
+    row-gap: .5em;
 }
 
 /* Logo */
 .logo {
     display: inline-block;
-    width: 60%;
+    width: 50%;
 }
 
 .logo__img {
@@ -109,4 +109,102 @@ body {
 .list__link--menu {
     color: var(--blanco);
     text-transform: uppercase;
+}
+
+/* Span */
+.span {
+    color: var(--rosa);
+}
+
+/* Hero */
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(79 193 243 / .2), rgba(255 99 152 / 0.2)), url(/assets/image/hero-mobile.png) center center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__h1 {
+    font-size: 1.9em;
+    color: var(--blanco);
+    text-shadow: 2px 5px 10px rgb(0 0 0 / .5);
+    letter-spacing: 1.5px;
+    font-weight: 400;
+}
+
+.hero__h1::before {
+    content: "Reunimos";
+    animation: palabras 8s infinite ease-in;
+}
+
+/* Animaciones del h1 */
+@keyframes palabras{
+    0% {
+        content: "Reunimos";
+    }
+
+    75% {
+        content: "Delicia";
+    }
+
+    100% {
+        content: "Somos la";
+    }
+}
+
+.span--hero {
+    text-shadow: none;
+}
+
+.span--hero::before {
+    content: "sonrisas";
+    animation: palabras2 8s infinite ease-in;
+    padding-left: .5em
+}
+
+/* Animaciones del span del h1 */
+@keyframes palabras2{
+    0% {
+        content: "sonrisas";
+    }
+
+    75% {
+        content: "refrescante";
+    }
+
+    100% {
+        content: "felicidad";
+    }
+}
+
+/* Nos especializamos */
+.nos-especializamos {
+    margin: 1.5em 0;
+    padding: 1.5em .5em;
+    background: var(--rosa);
+}
+
+.nos-especializamos__img {
+    display: none;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.nos-especializamos__texts {
+    text-align: center;
+    color: var(--blanco);
+}
+
+.nos-especializamos__h2 {
+    font-size: 1.9em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: .5em;
+}
+
+.nos-especializamos__p {
+    line-height: 1.5;
+    font-size: 1em;
 }
