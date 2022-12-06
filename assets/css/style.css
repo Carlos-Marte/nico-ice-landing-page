@@ -168,7 +168,6 @@ body {
     transform: rotate(360deg);
     animation: mover 1.5s ease-out infinite alternate-reverse,
     rotar 1s 5s 1 ease;
-    
 }
 
 @keyframes mover {
