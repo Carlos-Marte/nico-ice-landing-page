@@ -48,7 +48,13 @@ body {
     width: 50%;
 }
 
-/* logo */
+/* Logo y list social centrado agregando padding left*/
+.logo:first-of-type,
+.list--social:first-of-type {
+    padding-left: 1em;
+}
+
+/* Logo img */
 .logo__img {
     width: 100%;
 }
