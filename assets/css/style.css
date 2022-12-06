@@ -62,11 +62,13 @@ body {
 /* Nav del menu mobile */
 .header__nav--menu {
     align-self: start;
+    
 }
 
 /* Icono menu mobile */
 .header__icon {
     position: absolute;
+    right: 5%;
     z-index: 100;
 }
 
