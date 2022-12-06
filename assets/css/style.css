@@ -317,6 +317,10 @@ body {
     cursor: pointer;
 }
 
+.footer__boton:active {
+    text-decoration: underline;
+}
+
 /* Nav */
 .footer__nav {
     margin-top: 1em;
