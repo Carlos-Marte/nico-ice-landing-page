@@ -46,15 +46,16 @@
 <body>
 
     <!-- Header -->
-    <header class="header">
-            <div class="logo">
+    <header class="header container">
+        <div class="header__content">
+            <div class="logo logo--desktop">
                 <img src="./assets/image/logo-letras.png" alt="Logo Nico Ice" loading="lazy" class="logo__img">
             </div>
-            
-            <!-- Nav links -->
+
+            <!-- Nav links mobile -->
             <nav class="header__nav header__nav--menu">
                 <img src="./assets/image/menu.svg" alt="Menu icon" loading="lazy" class="header__icon">
-            
+
                 <ul class="list list--menu">
                     <li class="list__item">
                         <a href="#link-nosotros" class="list__link list__link--menu">Nosotros</a>
@@ -67,13 +68,30 @@
                     </li>
                 </ul>
             </nav>
-            
+
+            <!-- Nav links desktop -->
+            <nav class="header__nav header__nav--desktop">
+
+                <ul class="list list--desktop">
+                    <li class="list__item">
+                        <a href="#link-nosotros" class="list__link list__link--desktop">Nosotros</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#link-menu" class="list__link list__link--desktop">Menú</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#link-contacto" class="list__link list__link--desktop">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+
             <!-- Nav social media -->
-            <nav class="header__nav">
+            <nav class="header__nav header__nav--social-desktop">
                 <ul class="list list--social">
                     <li class="list__item">
                         <a href="#" class="list__link">
-                            <img src="./assets/image/icon-youtube-blue.svg" alt="Youtube icon" loading="lazy" class="list__icon">
+                            <img src="./assets/image/icon-youtube-blue.svg" alt="Youtube icon" loading="lazy"
+                                class="list__icon">
                         </a>
                     </li>
                     <li class="list__item">
@@ -90,19 +108,19 @@
                     </li>
                 </ul>
             </nav>
+        </div>
     </header>
 
     <!-- Hero -->
-    <div class="hero">
+    <div class="hero container">
         <h1 class="hero__h1">Reunimos <span class="span span--hero">sonrisas</span></h1>
         <img src="./assets/image/face.svg" alt="Imagen de cara sonriendo" loading="lazy" class="hero__img">
     </div>
 
     <!-- Main -->
-    <main class="main">
-
+    <main class="main container">
         <!-- Nos especializamos -->
-        <section id="link-nosotros" class="nos-especializamos container">
+        <section id="link-nosotros" class="nos-especializamos">
             <img src="./assets/image/nos-especializamos.png" alt="Imagen nos especializamos" loading="lazy"
                 class="nos-especializamos__img">
 
@@ -110,16 +128,19 @@
                 <h2 class="nos-especializamos__h2">Nos especializamos</h2>
                 <p class="nos-especializamos__p">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar dapibus porta. Pellentesque
-                    nunc quam, bibendum ut quam pretium, pharetra pulvinar ligula. Vestibulum dapibus justo sed aliquet
-                    rutrum. Sed a felis libero. Nam scelerisque ipsum dictum felis pulvinar, ac posuere quam eleifend.
+                    nunc quam, bibendum ut quam pretium, pharetra pulvinar ligula. Vestibulum dapibus justo sed
+                    aliquet
+                    rutrum. Sed a felis libero. Nam scelerisque ipsum dictum felis pulvinar, ac posuere quam
+                    eleifend.
                     Aliquam mauris metus, consequat ut arcu ut, aliquam egestas odio. Aenean fringilla ante maximus,
-                    imperdiet mauris ac, scelerisque urna. Aliquam mi odio, ultrices eget neque in, congue posuere quam.
+                    imperdiet mauris ac, scelerisque urna. Aliquam mi odio, ultrices eget neque in, congue posuere
+                    quam.
                     Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
                 </p>
             </div>
         </section>
 
-        <section id="link-menu" class="menu container">
+        <section id="link-menu" class="menu">
             <div class="menu__title">
                 <h2 class="menu__h2">Menú</h2>
             </div>
@@ -134,7 +155,8 @@
                     <div class="menu__producto-texts">
                         <h2 class="menu__h2 menu__h2--producto">Nico <span class="span">¡BOOM!</span></h2>
                         <p class="menu__p">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut
                             labore et dolore magna aliqua.
                         </p>
                         <p class="menu__p menu__p--precio">Precio 135$</p>
@@ -144,13 +166,15 @@
                 <!-- Producto #2 -->
                 <div class="menu__producto">
                     <!-- Imagen producto -->
-                    <img src="./assets/image/producto-2.png" alt="Imagen producto #2" loading="lazy" class="menu__img">
+                    <img src="./assets/image/producto-2.png" alt="Imagen producto #2" loading="lazy"
+                        class="menu__img menu__img--order">
 
                     <!-- Texto producto-->
                     <div class="menu__producto-texts">
                         <h2 class="menu__h2 menu__h2--producto">Nico <span class="span">¡BOOM!</span></h2>
                         <p class="menu__p">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut
                             labore et dolore magna aliqua.
                         </p>
                         <p class="menu__p menu__p--precio">Precio 135$</p>
@@ -163,63 +187,66 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer container">
         <!-- Separacion -->
         <hr class="footer__hr">
 
-        <!-- Logo -->
-        <div class="logo">
-            <img src="./assets/image/logo-letras.png" alt="Logo Nico Ice" loading="lazy" class="logo__img">
-        </div>
-
-        <!-- Enlaces rápidos-->
-        <div class="footer__container">
-            <h3 class="footer__h3">Enlaces rápidos</h3>
-
-            <ul class="list list--footer">
-                <li class="list__item list__item--footer">
-                    <a href="#link-nosotros" class="list__link list__link--footer">Nosotros</a>
-                </li>
-                <li class="list__item list__item--footer">
-                    <a href="#link-menu" class="list__link list__link--footer">Menú</a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Dudas y redes sociales -->
-        <div class="footer__container">
-            <div id="link-contacto" class="footer__dudas-container">
-                <!-- Dudas -->
-                <h3 class="footer__h3">¿Tienes dudas?</h3>
-                <a href="#" class="footer__boton">¡Contáctanos!</a>
+        <div class="footer__content">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="./assets/image/logo-letras.png" alt="Logo Nico Ice" loading="lazy" class="logo__img">
             </div>
 
-            <!-- Social media icons -->
-            <nav class="footer__nav">
-                <ul class="list list--social">
-                    <li class="list__item">
-                        <a href="#" class="list__link">
-                            <img src="./assets/image/icon-youtube-pink.svg" alt="Youtube icon" loading="lazy"
-                                class="list__icon">
-                        </a>
+            <!-- Enlaces rápidos-->
+            <div class="footer__container">
+                <h3 class="footer__h3">Enlaces rápidos</h3>
+
+                <ul class="list list--footer">
+                    <li class="list__item list__item--footer">
+                        <a href="#link-nosotros" class="list__link list__link--footer">Nosotros</a>
                     </li>
-                    <li class="list__item">
-                        <a href="#" class="list__link">
-                            <img src="./assets/image/icon-facebook-circle-pink.svg" alt="Facebook icon" loading="lazy"
-                                class="list__icon">
-                        </a>
-                    </li>
-                    <li class="list__item">
-                        <a href="#" class="list__link">
-                            <img src="./assets/image/icon-instagram-pink.svg" alt="Instagram icon" loading="lazy"
-                                class="list__icon">
-                        </a>
+                    <li class="list__item list__item--footer">
+                        <a href="#link-menu" class="list__link list__link--footer">Menú</a>
                     </li>
                 </ul>
-            </nav>
-        </div>
+            </div>
 
-        <h3 class="footer__h3"><span class="span">Copyright © 2022.</span> Todos los derechos reservados</h3>
+            <!-- Dudas y redes sociales -->
+            <div class="footer__container">
+                <div id="link-contacto" class="footer__dudas-container">
+                    <!-- Dudas -->
+                    <h3 class="footer__h3">¿Tienes dudas?</h3>
+                    <a href="#" class="footer__boton">¡Contáctanos!</a>
+                </div>
+
+                <!-- Social media icons -->
+                <nav class="footer__nav">
+                    <ul class="list list--social">
+                        <li class="list__item">
+                            <a href="#" class="list__link">
+                                <img src="./assets/image/icon-youtube-pink.svg" alt="Youtube icon" loading="lazy"
+                                    class="list__icon">
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="#" class="list__link">
+                                <img src="./assets/image/icon-facebook-circle-pink.svg" alt="Facebook icon"
+                                    loading="lazy" class="list__icon">
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="#" class="list__link">
+                                <img src="./assets/image/icon-instagram-pink.svg" alt="Instagram icon" loading="lazy"
+                                    class="list__icon">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <h3 class="footer__h3 footer__h3--copy"><span class="span">Copyright © 2022.</span> Todos los derechos
+                reservados</h3>
+        </div>
     </footer>
 </body>
 

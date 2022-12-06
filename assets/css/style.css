@@ -7,7 +7,7 @@
 :root {
     /* Font */
     --font: 'Fredoka One', cursive;
-    
+
     /* Colores */
     --blanco: #FBFBFF;
     --azul: #4FC1F3;
@@ -30,19 +30,25 @@ body {
 
 /* Container */
 .container {
-    max-width: 760px;
+    max-width: 2000px;
     margin: 0 auto;
 }
 
 /* Chispas */
-.header,
+/* .header,
 .footer {
     background: url(/assets/image/chispas-bg.png) center center / cover no-repeat;
-}
+} */
 
 /* Header */
 .header {
     padding: 1em;
+}
+
+/* Contenido del header */
+.header__content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 24px;
     grid-auto-rows: max-content;
@@ -53,7 +59,8 @@ body {
 /* Contenedor Logo */
 .logo {
     display: inline-block;
-    width: 50%;
+    width: 100%;
+    max-width: 200px;
     background: var(--blanco);
     border-radius: 50%;
 }
@@ -72,7 +79,11 @@ body {
 /* Nav del menu mobile */
 .header__nav--menu {
     align-self: start;
-    
+}
+
+/* Nav desktop */
+.header__nav--desktop {
+    display: none;
 }
 
 /* Icono menu mobile */
@@ -164,15 +175,21 @@ body {
 
 /* Img */
 .hero__img {
-    width: 15%;
+    width: 100%;
+    max-width: 60px;
     transform: rotate(360deg);
     animation: mover 1.5s ease-out infinite alternate-reverse,
-    rotar 1s 5s 1 ease;
+        rotar 1s 5s 1 ease;
 }
 
 @keyframes mover {
-    to {transform: translate(0, 0);}
-    from {transform: translate(0, -50%);}
+    to {
+        transform: translate(0, 0);
+    }
+
+    from {
+        transform: translate(0, -50%);
+    }
 }
 
 @keyframes rotar {
@@ -193,8 +210,12 @@ body {
 
 /* Nos especializamos */
 .nos-especializamos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
     margin: 1em 0;
-    padding: 2em .5em;
+    padding: 2em 1em;
     background: var(--rosa);
 }
 
@@ -202,6 +223,7 @@ body {
 .nos-especializamos__img {
     display: none;
     width: 100%;
+    max-width: 350px;
     border-radius: 30px;
 }
 
@@ -230,6 +252,8 @@ body {
 }
 
 /* Menu */
+
+/* Titulo */
 .menu__title {
     width: 100%;
     padding: 1em;
@@ -249,22 +273,40 @@ body {
 /* Grid container */
 .menu__grid-container {
     display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5em;
     grid-template-columns: 1fr;
     grid-auto-rows: max-content;
     row-gap: 2em;
 }
 
+/* Producto */
+.menu__producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    grid-column: 1 / -1;
+}
+
 /* Imagen */
 .menu__img {
-    width: 80%;
+    width: 100%;
+    max-width: 300px;
     max-height: 300px;
-    margin: 0 auto;
     object-fit: cover;
     border-radius: 30px;
 }
 
+.menu__img--order {
+    order: 2;
+}
+
 /* Contenedor textos */
 .menu__producto-texts {
+    max-width: 400px;
     margin-top: 1.5em;
     display: flex;
     flex-direction: column;
@@ -284,8 +326,15 @@ body {
 }
 
 .menu__p--precio {
+    display: inline-block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 1em;
+    font-size: 1.4em;
     color: var(--rosa);
-    font-size: 1.2em;
+    border-top: 1px solid var(--rosa);
+    border-bottom: 1px solid var(--rosa);
+    ;
 }
 
 /* Boton */
@@ -298,21 +347,33 @@ body {
     border-radius: 30px;
     text-decoration: none;
     cursor: pointer;
+    transition: background .2s ease;
 }
 
 .menu__boton:active {
     text-decoration: underline;
 }
 
+.menu__boton:hover {
+    background: var(--rosa);
+}
+
 /* Footer */
 .footer {
     padding: 1.5em 1em;
+    text-align: center;
+}
+
+/* Contenido del footer */
+.footer__content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: max-content;
+    place-content: center;
     place-items: center;
     row-gap: 1em;
-    text-align: center;
 }
 
 /* Linea */
@@ -363,10 +424,15 @@ body {
     border-radius: 30px;
     text-decoration: none;
     cursor: pointer;
+    transition: background .2s ease;
 }
 
 .footer__boton:active {
     text-decoration: underline;
+}
+
+.footer__boton:hover {
+    background: var(--rosa);
 }
 
 /* Nav */
@@ -374,4 +440,129 @@ body {
     margin-top: 1em;
     display: flex;
     justify-content: center;
+}
+
+/* Tablet y Desktop */
+@media only screen and (min-width: 760px) {
+
+    /* Header */
+    .header__content {
+        grid-template-columns: 1fr .5fr 1fr;
+        grid-auto-flow: dense;
+        row-gap: unset;
+    }
+
+    /* Logo y list social centrado removimiento padding left*/
+    .logo:first-of-type,
+    .list--social:nth-of-type(1) {
+        padding-left: 0;
+    }
+
+    /* Logo */
+    .logo--desktop {
+        grid-column: 2;
+    }
+
+    /* Nav menu */
+    .header__nav--menu {
+        display: none;
+    }
+
+    /* Nav desktop */
+    .header__nav--desktop {
+        display: block;
+        grid-column: 1;
+    }
+
+    /* List desktop */
+    .list--desktop {
+        display: flex;
+        gap: 1.5em;
+    }
+
+    /* List link desktop */
+    .list__link--desktop {
+        color: var(--gris-oscuro);
+    }
+
+    /* Social nav desktop */
+    .header__nav--social-desktop {
+        grid-column: 3;
+    }
+
+    /* Hero */
+    .hero {
+        background: linear-gradient(to bottom, rgba(50 50 50 / 0.2), rgba(100 100 100 / 0.2)), url(/assets/image/hero.png) center center / cover no-repeat;
+        gap: 5em;
+    }
+
+    /* Hero H1 */
+    .hero__h1 {
+        font-size: 2.5em;
+    }
+
+    /* Hero img */
+    .hero__img {
+        max-width: 100px;
+    }
+
+    /* Nos especializamos */
+
+    /* Contenedor textos */
+    .nos-especializamos__texts {
+        max-width: 600px;
+    }
+
+    /* Imagen */
+    .nos-especializamos__img {
+        display: inline-block;
+    }
+
+    /* Menú */
+
+    /* Grid container */
+    .menu__grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3em;
+    }
+
+    /* Producto */
+    .menu__producto {
+        flex-direction: row;
+        grid-column: 1 / -1;
+    }
+
+    /* Contenedor textos */
+    .menu__producto-texts {
+        max-width: 500px;
+    }
+
+    /* Párrafo del precio */
+    .menu__p--precio {
+        font-size: 1.5em;
+    }
+
+    .menu__boton {
+        padding: .9em 3em;
+    }
+
+    /* Footer */
+
+    /* Contenido del footer */
+    .footer__content {
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 2em;
+    }
+
+    /* Contenedor */
+    .footer__container {
+        margin: 0;
+    }
+
+    /* H3 Copyright */
+    .footer__h3--copy {
+        grid-column: 2 / -1;
+        grid-row: 3;
+        justify-self: end;
+    }
 }
