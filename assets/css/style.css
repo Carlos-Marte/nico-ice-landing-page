@@ -13,7 +13,8 @@
     --azul: #4FC1F3;
     --rosa: #FF6398;
     --gris-claro: #717B84;
-    --gris-oscuro: #2e2e2e;
+    --gris-oscuro: #2E2E2E;
+    --linear: linear-gradient(to bottom, rgba(50 50 50 / 0.2), rgba(100 100 100 / 0.2));
 
     scroll-behavior: smooth;
 }
@@ -21,6 +22,7 @@
 body {
     font-family: var(--font);
     background: var(--blanco);
+    background-size: cover;
     color: var(--gris-oscuro);
     font-weight: 400;
     min-width: 320px;
@@ -30,6 +32,12 @@ body {
 .container {
     max-width: 760px;
     margin: 0 auto;
+}
+
+/* Chispas */
+.header,
+.footer {
+    background: url(/assets/image/chispas-bg.png) center center / cover no-repeat;
 }
 
 /* Header */
@@ -46,6 +54,8 @@ body {
 .logo {
     display: inline-block;
     width: 50%;
+    background: var(--blanco);
+    border-radius: 50%;
 }
 
 /* Logo y list social centrado agregando padding left*/
@@ -137,8 +147,10 @@ body {
     /* linear-gradient(to bottom, rgba(79 193 243 / .2), rgba(255 99 152 / 0.2)) */
     background: linear-gradient(to bottom, rgba(50 50 50 / 0.2), rgba(100 100 100 / 0.2)), url(/assets/image/hero-mobile.png) center center / cover no-repeat;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 3.5em;
 }
 
 /* H1 hero*/
@@ -150,9 +162,34 @@ body {
     font-weight: inherit;
 }
 
+/* Img */
+.hero__img {
+    width: 15%;
+    transform: rotate(360deg);
+    animation: mover 1.5s ease-out infinite alternate-reverse,
+    rotar 1s 5s 1 ease;
+    
+}
+
+@keyframes mover {
+    to {transform: translate(0, 0);}
+    from {transform: translate(0, -50%);}
+}
+
+@keyframes rotar {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* Span hero */
 .span--hero {
-    text-shadow: none;
+    color: var(--azul);
+    /* text-shadow: none; */
 }
 
 /* Nos especializamos */
@@ -204,6 +241,7 @@ body {
 
 /* H2 */
 .menu__h2 {
+    color: var(--blanco);
     font-weight: inherit;
     letter-spacing: 1px;
     text-decoration: underline;
@@ -236,11 +274,13 @@ body {
 
 /* H2 del producto */
 .menu__h2--producto {
+    color: var(--azul);
     text-decoration: none;
 }
 
 /* Párrafo */
 .menu__p {
+    padding: 0 1em;
     line-height: 1.2;
 }
 
@@ -289,6 +329,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1em;
+    background: var(--blanco);
 }
 
 .footer__h3 {
