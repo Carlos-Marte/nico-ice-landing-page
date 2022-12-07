@@ -28,7 +28,7 @@ body {
     min-width: 320px;
 }
 
-/* Container */
+/* Contenedor */
 .container {
     max-width: 2000px;
     margin: 0 auto;
@@ -56,7 +56,7 @@ body {
     row-gap: .5em;
 }
 
-/* Contenedor Logo */
+/* Logo */
 .logo {
     display: inline-block;
     width: 100%;
@@ -65,15 +65,15 @@ body {
     border-radius: 50%;
 }
 
-/* Logo y list social centrado agregando padding left*/
+/* IMG de Logo */
+.logo__img {
+    width: 100%;
+}
+
+/* Padding left para Logo y List Social*/
 .logo:first-of-type,
 .list--social:first-of-type {
     padding-left: 1em;
-}
-
-/* Logo img */
-.logo__img {
-    width: 100%;
 }
 
 /* Nav del menu mobile */
@@ -98,13 +98,13 @@ body {
     display: none;
 }
 
-/* Lista de iconos de redes */
+/* Lista de redes */
 .list--social {
     display: flex;
     gap: 1em;
 }
 
-/* Modificador para mostrar el menu */
+/* Modificador para el menú mobile */
 .list--menu {
     width: 100%;
     height: 100vh;
@@ -122,6 +122,7 @@ body {
     transform: translate(0, -100%);
 }
 
+/* Modificador para mostrar el menú mobile*/
 .list--menu-show {
     transform: translate(0, 0);
 }
@@ -164,7 +165,7 @@ body {
     gap: 3.5em;
 }
 
-/* H1 hero*/
+/* H1 del Hero*/
 .hero__h1 {
     font-size: 1.9em;
     color: var(--blanco);
@@ -173,7 +174,7 @@ body {
     font-weight: inherit;
 }
 
-/* Img */
+/* IMG del Hero */
 .hero__img {
     width: 100%;
     max-width: 60px;
@@ -182,6 +183,13 @@ body {
         rotar 1s 5s 1 ease;
 }
 
+/* SPAN del hero */
+.span--hero {
+    color: var(--azul);
+    /* text-shadow: none; */
+}
+
+/* Animación */
 @keyframes mover {
     to {
         transform: translate(0, 0);
@@ -191,24 +199,7 @@ body {
         transform: translate(0, -50%);
     }
 }
-
-@keyframes rotar {
-    0% {
-        transform: rotate(0);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* Span hero */
-.span--hero {
-    color: var(--azul);
-    /* text-shadow: none; */
-}
-
-/* Nos especializamos */
+/* Sección Nos especializamos */
 .nos-especializamos {
     display: flex;
     justify-content: center;
@@ -219,7 +210,7 @@ body {
     background: var(--rosa);
 }
 
-/* Imagen */
+/* IMG de Nos especializamos */
 .nos-especializamos__img {
     display: none;
     width: 100%;
@@ -227,13 +218,13 @@ body {
     border-radius: 30px;
 }
 
-/* Contenedor textos */
+/* CONTENEDOR DE TEXTOS de Nos especializamos*/
 .nos-especializamos__texts {
     text-align: center;
     color: var(--blanco);
 }
 
-/* H2 */
+/* H2 de Nos especializamos */
 .nos-especializamos__h2 {
     font-size: 1.9em;
     font-weight: 400;
@@ -241,19 +232,18 @@ body {
     margin-bottom: .5em;
 }
 
-/* Párrafo */
+/* PÁRRAFO de Nos especializamos */
 .nos-especializamos__p {
     line-height: 1.5;
     font-size: 1em;
 }
 
+/* Menú */
 .menu {
     text-align: center;
 }
 
-/* Menu */
-
-/* Titulo */
+/* TÍTULO de Menú */
 .menu__title {
     width: 100%;
     padding: 1em;
@@ -262,7 +252,7 @@ body {
     margin-bottom: 2.5em;
 }
 
-/* H2 */
+/* H2 de Menú */
 .menu__h2 {
     color: var(--blanco);
     font-weight: inherit;
@@ -270,7 +260,7 @@ body {
     text-decoration: underline;
 }
 
-/* Grid container */
+/* Grid container del Menú*/
 .menu__grid-container {
     display: grid;
     max-width: 1200px;
@@ -281,7 +271,7 @@ body {
     row-gap: 2em;
 }
 
-/* Producto */
+/* Producto de Menú */
 .menu__producto {
     display: flex;
     flex-direction: column;
@@ -291,7 +281,7 @@ body {
     grid-column: 1 / -1;
 }
 
-/* Imagen */
+/* IMG de Producto de Menú */
 .menu__img {
     width: 100%;
     max-width: 300px;
@@ -304,7 +294,7 @@ body {
     order: 2;
 }
 
-/* Contenedor textos */
+/* Contenedor textos de Producto de Menú */
 .menu__producto-texts {
     max-width: 400px;
     margin-top: 1.5em;
@@ -313,18 +303,19 @@ body {
     gap: 1em;
 }
 
-/* H2 del producto */
+/* H2 de Producto de Menú */
 .menu__h2--producto {
     color: var(--azul);
     text-decoration: none;
 }
 
-/* Párrafo */
+/* Párrafo de Producto de Menú */
 .menu__p {
     padding: 0 1em;
     line-height: 1.2;
 }
 
+/*  Párrafo del Precio de producto del Menú */
 .menu__p--precio {
     display: inline-block;
     width: fit-content;
@@ -337,7 +328,7 @@ body {
     ;
 }
 
-/* Boton */
+/* Botón del Menú */
 .menu__boton {
     display: inline-block;
     margin: 3em 0;
@@ -364,7 +355,7 @@ body {
     text-align: center;
 }
 
-/* Contenido del footer */
+/* Contenido del Footer */
 .footer__content {
     max-width: 1200px;
     margin: 0 auto;
@@ -376,14 +367,14 @@ body {
     row-gap: 1em;
 }
 
-/* Linea */
+/* Linea parte superior del Footer */
 .footer__hr {
     width: 100%;
     margin: 0 auto;
     background: var(--gris-claro);
 }
 
-/* Contenedor */
+/* Contenedor cualquiera de Footer */
 .footer__container {
     margin: 1em 0;
     display: flex;
@@ -392,12 +383,13 @@ body {
     background: var(--blanco);
 }
 
+/* H3 de Footer */
 .footer__h3 {
     font-size: 1.2em;
     font-weight: inherit;
 }
 
-/* List */
+/* List de Footer */
 .list--footer {
     display: block;
 }
@@ -414,7 +406,7 @@ body {
     font-size: 1.1em;
 }
 
-/* Boton */
+/* Botón de Footer */
 .footer__boton {
     display: inline-block;
     margin: 1.5em 0;
@@ -435,7 +427,7 @@ body {
     background: var(--rosa);
 }
 
-/* Nav */
+/* Nav de Footer */
 .footer__nav {
     margin-top: 1em;
     display: flex;
@@ -452,7 +444,7 @@ body {
         row-gap: unset;
     }
 
-    /* Logo y list social centrado removimiento padding left*/
+    /* Eliminando padding left de Logo y List Social*/
     .logo:first-of-type,
     .list--social:nth-of-type(1) {
         padding-left: 0;
@@ -496,70 +488,65 @@ body {
         gap: 5em;
     }
 
-    /* Hero H1 */
+    /* H1 de Hero */
     .hero__h1 {
         font-size: 2.5em;
     }
 
-    /* Hero img */
+    /* IMG de Hero */
     .hero__img {
         max-width: 100px;
     }
 
-    /* Nos especializamos */
-
-    /* Contenedor textos */
+    /* Contenedor textos de Nos especializamos */
     .nos-especializamos__texts {
         max-width: 600px;
     }
 
-    /* Imagen */
+    /* IMG de Nos especializamos */
     .nos-especializamos__img {
         display: inline-block;
     }
 
-    /* Menú */
-
-    /* Grid container */
+    /* Grid container del Menú */
     .menu__grid-container {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 3em;
     }
 
-    /* Producto */
+    /* Producto de Menú*/
     .menu__producto {
         flex-direction: row;
         grid-column: 1 / -1;
     }
 
-    /* Contenedor textos */
+    /* Contenedor textos de Productos del Menú */
     .menu__producto-texts {
         max-width: 500px;
     }
 
-    /* Párrafo del precio */
+    /* Párrafo del precio de Producto del Menú */
     .menu__p--precio {
         font-size: 1.5em;
     }
 
+    /* Botón del Menú */
     .menu__boton {
         padding: .9em 3em;
     }
 
-    /* Footer */
-
-    /* Contenido del footer */
+    /* Contenido del Footer */
     .footer__content {
         grid-template-columns: repeat(3, 1fr);
         padding-top: 2em;
     }
 
-    /* Contenedor */
+    /* Contenedor cualquier del Footer */
     .footer__container {
         margin: 0;
     }
 
-    /* H3 Copyright */
+    /* H3 Copyright de Footer */
     .footer__h3--copy {
         grid-column: 2 / -1;
         grid-row: 3;
