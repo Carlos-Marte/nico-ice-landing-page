@@ -227,7 +227,7 @@ body {
 /* H2 de Nos especializamos */
 .nos-especializamos__h2 {
     font-size: 1.9em;
-    font-weight: 400;
+    font-weight: inherit;
     letter-spacing: 1px;
     margin-bottom: .5em;
 }
