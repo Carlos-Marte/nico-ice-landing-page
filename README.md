@@ -1,6 +1,6 @@
 # Nico Ice Landing page
 
-:pushpin: Proyecto realizado para una tarea de mercadeo. Esta realizado usando `<HTML>`, `<CSS>` y `<JS>`.
+:pushpin: Proyecto realizado para una tarea de mercadeo. Está realizado usando `<HTML>`, `<CSS>` y `<JS>`.
 
 :pushpin: Maquetada con grid y flexbox.
 
